@@ -2,7 +2,7 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
+import toto from "../images/toto.jpeg"  ;
 
 function IndexPage() {
   return (
@@ -16,24 +16,14 @@ function IndexPage() {
         <img
           alt="Cat and human sitting on a couch"
           className="block w-1/2 mx-auto mb-8"
-          src={catAndHumanIllustration}
+          src={toto}
         />
 
         <h2 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400">
-          Hey there! Welcome to your first Gatsby site.
+          안녕, 블로그 테스트 중이야
         </h2>
 
         <p className="leading-loose">
-          This is a barebones starter for Gatsby styled using{` `}
-          <a
-            className="font-bold text-gray-900 no-underline"
-            href="https://tailwindcss.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Tailwind CSS
-          </a>
-          , a utility-first CSS framework.
         </p>
       </section>
     </Layout>
