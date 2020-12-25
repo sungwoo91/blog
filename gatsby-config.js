@@ -1,11 +1,11 @@
-const resolveConfig = require("tailwindcss/resolveConfig");
-const tailwindConfig = require("./tailwind.config.js");
+const resolveConfig = require("tailwindcss/resolveConfig")
+const tailwindConfig = require("./tailwind.config.js")
 
-const fullConfig = resolveConfig(tailwindConfig);
+const fullConfig = resolveConfig(tailwindConfig)
 
 module.exports = {
   siteMetadata: {
-    title: `기술 블로그`,
+    title: `블로그`,
     description: `Gatsby starter styled with Tailwind`,
     author: `@taylorbryant`,
   },
@@ -38,4 +38,4 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
   ],
-};
+}
