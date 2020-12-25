@@ -15,7 +15,7 @@ function Header() {
   `)
 
   return (
-    <header className="fixed w-full h-24 bg-yellow-300 z-50">
+    <header className="fixed w-full bg-yellow-300 z-50">
       <div className="flex flex-wrap items-center justify-between p-4 mx-auto md:py-8 md:px-16">
         <button className="text-white" onClick={() => alert("승민이 안녕!")}>
           <svg
