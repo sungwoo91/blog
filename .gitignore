@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 # Based on gatsby-starter-default's .gitignore
 # https://github.com/gatsbyjs/gatsby-starter-default/blob/master/.gitignore
 
+=======
+>>>>>>> 0963f88b067b285550665154393c15f9509ee6d8
 # Logs
 logs
 *.log
@@ -68,6 +71,11 @@ public
 yarn-error.log
 .pnp/
 .pnp.js
+<<<<<<< HEAD
 
 # Yarn Integrity file
 .yarn-integrity
+=======
+# Yarn Integrity file
+.yarn-integrity
+>>>>>>> 0963f88b067b285550665154393c15f9509ee6d8
