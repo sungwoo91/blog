@@ -5,10 +5,10 @@ import Header from "./header"
 
 function Layout({ children }) {
   return (
-    <div className="flex flex-col min-h-screen font-sans text-gray-900 ">
+    <div className="flex flex-col min-h-screen font-sans text-gray-900 bg-gray-100">
       <Header />
 
-      <main className="flex-1 relative w-full max-w-4xl px-4 py-8 mx-auto md:px-8 md:py-16">
+      <main className="flex-1 w-full max-w-6xl px-4 py-24 mx-auto md:px-8 md:py-32">
         {children}
       </main>
 
@@ -22,7 +22,7 @@ function Layout({ children }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              LEE SUNGWOO
+              SUNGWOO
             </a>
           </p>
         </nav>

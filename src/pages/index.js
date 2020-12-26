@@ -2,57 +2,57 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import toto from "../images/toto.jpeg"
+
+// eslint-disable-next-line import/no-unresolved
+import Post from "../components/post"
 
 function IndexPage() {
   return (
     <Layout>
       <SEO
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title="성우 블로그"
+        title="Sungwoo Blog"
       />
 
-      <section className="text-center">
-        <img
-          alt="Cat and human sitting on a couch"
-          className="block w-1/2 mx-auto mb-8"
-          src={toto}
-        />
-
-        <h2 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400">
-          안녕, 블로그 테스트 중이야
-        </h2>
-
-        <p className="leading-loose"></p>
-      </section>
-
-      <section className="text-center">
-        <img
-          alt="Cat and human sitting on a couch"
-          className="block w-1/2 mx-auto mb-8"
-          src={toto}
-        />
-
-        <h2 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400">
-          안녕, 블로그 테스트 중이야
-        </h2>
-
-        <p className="leading-loose"></p>
-      </section>
-
-      <section className="text-center">
-        <img
-          alt="Cat and human sitting on a couch"
-          className="block w-1/2 mx-auto mb-8"
-          src={toto}
-        />
-
-        <h2 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400">
-          안녕, 블로그 테스트 중이야
-        </h2>
-
-        <p className="leading-loose"></p>
-      </section>
+      <ol className="">
+        <h1 className="text-left font-medium m-4 text-2xl">Posts</h1>
+        <Post
+          link={"/blog/my-first-post/"}
+          title={
+            "Go to my first Markdown blog postGo to my first Markdown blog post"
+          }
+        ></Post>
+        <Post
+          link={"/blog/my-second-post/"}
+          title={
+            "Go to my second Markdown blog postGo to my first Markdown blog post"
+          }
+        ></Post>
+        <Post
+          link={"/blog/my-second-post/"}
+          title={
+            "Go to my second Markdown blog postGo to my first Markdown blog post"
+          }
+        ></Post>
+        <Post
+          link={"/blog/my-second-post/"}
+          title={
+            "Go to my second Markdown blog postGo to my first Markdown blog post"
+          }
+        ></Post>
+        <Post
+          link={"/blog/my-second-post/"}
+          title={
+            "Go to my second Markdown blog postGo to my first Markdown blog post"
+          }
+        ></Post>
+        <Post
+          link={"/blog/my-second-post/"}
+          title={
+            "Go to my second Markdown blog postGo to my first Markdown blog post"
+          }
+        ></Post>
+      </ol>
     </Layout>
   )
 }
