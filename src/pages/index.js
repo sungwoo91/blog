@@ -1,12 +1,29 @@
 import React from "react"
-
+import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
-// eslint-disable-next-line import/no-unresolved
 import Post from "../components/post"
 
 function IndexPage() {
+  const data = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            frontmatter {
+              date(formatString: "MMMM DD, YYYY")
+              slug
+              title
+            }
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Layout>
       <SEO
@@ -16,42 +33,14 @@ function IndexPage() {
 
       <ol className="">
         <h1 className="text-left font-medium m-4 text-2xl">Posts</h1>
-        <Post
-          link={"/blog/my-first-post/"}
-          title={
-            "Go to my first Markdown blog postGo to my first Markdown blog post"
-          }
-        ></Post>
-        <Post
-          link={"/blog/my-second-post/"}
-          title={
-            "Go to my second Markdown blog postGo to my first Markdown blog post"
-          }
-        ></Post>
-        <Post
-          link={"/blog/my-second-post/"}
-          title={
-            "Go to my second Markdown blog postGo to my first Markdown blog post"
-          }
-        ></Post>
-        <Post
-          link={"/blog/my-second-post/"}
-          title={
-            "Go to my second Markdown blog postGo to my first Markdown blog post"
-          }
-        ></Post>
-        <Post
-          link={"/blog/my-second-post/"}
-          title={
-            "Go to my second Markdown blog postGo to my first Markdown blog post"
-          }
-        ></Post>
-        <Post
-          link={"/blog/my-second-post/"}
-          title={
-            "Go to my second Markdown blog postGo to my first Markdown blog post"
-          }
-        ></Post>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <Post
+            key={node.frontmatter.slug}
+            date={node.frontmatter.date}
+            link={node.frontmatter.slug}
+            title={node.frontmatter.title}
+          />
+        ))}
       </ol>
     </Layout>
   )

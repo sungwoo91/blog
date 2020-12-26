@@ -6,11 +6,10 @@ const fullConfig = resolveConfig(tailwindConfig)
 module.exports = {
   siteMetadata: {
     title: `Blog`,
-    description: `Gatsby starter styled with Tailwind`,
-    author: `@taylorbryant`,
+    description: `Sungwoo Blog`,
+    author: `@sungwoo`,
   },
   plugins: [
-    `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -44,6 +43,8 @@ module.exports = {
         path: `${__dirname}/src/markdown-pages`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+    },
   ],
 }

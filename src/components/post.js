@@ -1,27 +1,25 @@
-/* eslint-disable react/prop-types */
 import React from "react"
 import { Link } from "gatsby"
 
-const Post = ({ link, title, description }) => {
+const Post = ({ date, link, title }) => {
   return (
-    <li className="flex flex-row p-6 bg-white m-4 h-24">
-      <article className="">
+    <li className="flex flex-col p-4 bg-white m-4 h-40 md:h-24">
+      <span className="text-sm font-light">{date}</span>
+      <article>
         <header className="font-medium text-lg">
           <Link to={link} itemProp="url">
-            <span itemProp="headline">{title}</span>
+            <span itemProp="headline ">{title.slice(0, 80)}</span>
           </Link>
         </header>
-        <span className="text-sm font-extralight">
-          {new Date(Date.now()).toDateString()}
-        </span>
-        <section>
+        {/* <section>
           <p
+            className=" font-light"
             dangerouslySetInnerHTML={{
-              __html: description,
+              __html: "desc",
             }}
             itemProp="description"
           />
-        </section>
+        </section> */}
       </article>
     </li>
   )
