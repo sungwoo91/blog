@@ -8,7 +8,7 @@ export default function Template({
 }) {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
-  console.log(html)
+
   return (
     <Layout>
       <SEO
@@ -17,8 +17,13 @@ export default function Template({
       />
       <div className="bg-white p-6">
         <div className="blog-post">
-          <h1 className="font-bold text-3xl">{frontmatter.title}</h1>
-          <h2 className="font-light">{frontmatter.date}</h2>
+          <header className="px-4 py-12">
+            <h1 className="font-bold text-2xl md:text-3xl">
+              {frontmatter.title}
+            </h1>
+            <h2 className="font-light">{frontmatter.date}</h2>
+          </header>
+
           <section
             className="markdown"
             dangerouslySetInnerHTML={{ __html: html }}

@@ -14,6 +14,7 @@ function IndexPage() {
         edges {
           node {
             frontmatter {
+              type
               date(formatString: "MMMM DD, YYYY")
               slug
               title
@@ -39,6 +40,7 @@ function IndexPage() {
             date={node.frontmatter.date}
             link={node.frontmatter.slug}
             title={node.frontmatter.title}
+            type={node.frontmatter.type}
           />
         ))}
       </ol>
