@@ -2,12 +2,20 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Disqus, CommentCount } from "gatsby-plugin-disqus"
 
 export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
+  data,
+  location, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
+
+  let disqusConfig = {
+    url: `${frontmatter.siteUrl + location.pathname}`,
+    identifier: frontmatter.id,
+    title: frontmatter.title,
+  }
 
   return (
     <Layout>
@@ -15,6 +23,7 @@ export default function Template({
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title="Sungwoo Blog"
       />
+
       <div className="bg-white p-6">
         <div className="blog-post">
           <header className="px-4 py-12">
@@ -30,6 +39,8 @@ export default function Template({
           />
         </div>
       </div>
+      <CommentCount config={disqusConfig} placeholder={"..."} />
+      <Disqus config={disqusConfig} />
     </Layout>
   )
 }
