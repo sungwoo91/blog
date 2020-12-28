@@ -5,7 +5,6 @@
   "author": "Sungwoo Lee",
   "dependencies": {
     "gatsby": "2.28.2",
-    "gatsby-plugin-disqus": "^1.2.2",
     "gatsby-plugin-manifest": "2.8.0",
     "gatsby-plugin-offline": "3.6.0",
     "gatsby-plugin-postcss": "3.3.0",

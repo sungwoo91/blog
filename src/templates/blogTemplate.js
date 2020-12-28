@@ -2,20 +2,13 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Disqus } from "gatsby-plugin-disqus"
+import Utterances from "../components/Utterance"
 
 export default function Template({
-  data,
-  location, // this prop will be injected by the GraphQL query below.
+  data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
-
-  let disqusConfig = {
-    siteUrl: `${"https://sungwoo.blog" + location.pathname}`,
-    identifier: `${"https://sungwoo.blog" + location.pathname}`,
-    title: frontmatter.title,
-  }
 
   return (
     <Layout>
@@ -34,12 +27,12 @@ export default function Template({
           </header>
 
           <section
-            className="markdown"
+            className="markdown-body"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>
       </div>
-      <Disqus config={disqusConfig} />
+      <Utterances repo={"sungwoo91/blog"}></Utterances>
     </Layout>
   )
 }
