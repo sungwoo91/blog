@@ -13,7 +13,7 @@ export default function Template({
 
   let disqusConfig = {
     siteUrl: `${"https://sungwoo.blog" + location.pathname}`,
-    identifier: "https://sungwoo.blog",
+    identifier: `${"https://sungwoo.blog" + location.pathname}`,
     title: frontmatter.title,
   }
 
