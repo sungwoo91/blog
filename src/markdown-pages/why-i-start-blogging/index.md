@@ -1,6 +1,5 @@
 ---
-type: "Life"
-slug: "/life/why-i-start-blogging"
+slug: "/why-i-start-blogging"
 date: "2020-12-27"
 title: "블로그를 시작하게 된 이유"
 ---
@@ -10,3 +9,12 @@ title: "블로그를 시작하게 된 이유"
 시기가 회사를 옮기는 시기라 시간적 여유가 있어서 포스팅 목표에 대해 적어보려 한다.
 
 # 포스팅 목표
+
+```
+hihi
+```
+
+>ddd
+ddd
+
+![Alt text](./toto.jpeg)
