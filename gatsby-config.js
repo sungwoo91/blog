@@ -5,7 +5,6 @@ const fullConfig = resolveConfig(tailwindConfig)
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://sungwo.blog/",
     title: `Blog`,
     description: `Sungwoo Blog`,
     author: `@sungwoo`,

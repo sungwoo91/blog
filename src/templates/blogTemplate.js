@@ -12,8 +12,8 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
 
   let disqusConfig = {
-    url: `${frontmatter.siteUrl + location.pathname}`,
-    identifier: frontmatter.id,
+    siteUrl: `${"https://sungwoo.blog" + location.pathname}`,
+    identifier: "https://sungwoo.blog",
     title: frontmatter.title,
   }
 
@@ -39,7 +39,7 @@ export default function Template({
           />
         </div>
       </div>
-      <CommentCount config={disqusConfig} placeholder={"..."} />
+      <CommentCount config={disqusConfig} placeholder={""} />
       <Disqus config={disqusConfig} />
     </Layout>
   )
