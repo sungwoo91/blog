@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Utterances from "../components/Utterance"
+import Utterances from "../components/Utterances"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -32,7 +32,7 @@ export default function Template({
           />
         </div>
       </div>
-      <Utterances repo={"sungwoo91/blog"}></Utterances>
+      <Utterances />
     </Layout>
   )
 }
