@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Disqus, CommentCount } from "gatsby-plugin-disqus"
+import { Disqus } from "gatsby-plugin-disqus"
 
 export default function Template({
   data,
@@ -39,7 +39,6 @@ export default function Template({
           />
         </div>
       </div>
-      <CommentCount config={disqusConfig} placeholder={""} />
       <Disqus config={disqusConfig} />
     </Layout>
   )
