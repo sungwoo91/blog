@@ -19,7 +19,7 @@ export default function Template({
 
       <div className="bg-white p-6">
         <div className="blog-post">
-          <header className="px-4 py-12">
+          <header className="flex flex-col justify-center items-center px-4 py-6">
             <h1 className="font-bold text-2xl md:text-3xl">
               {frontmatter.title}
             </h1>
