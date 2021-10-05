@@ -18,7 +18,7 @@ function Header() {
       <div className="flex flex-wrap items-center justify-between p-4 mx-auto md:py-8 md:px-16">
         <button
           className="text-white w-8 h-8"
-          onClick={() => alert("승민이 안녕!")}
+          onClick={() => alert("")}
         >
           {/* <svg
             className="fill-current"
